@@ -1,21 +1,29 @@
 <template>
   <div>
-    <OrderHeader />
-     order
     <router-view></router-view>
-    <NavFooter />
+    <ServiceBar></ServiceBar>
+    <NavFooter></NavFooter>
   </div>
 </template>
 
 <script>
-import OrderHeader from './../components/OrderHeader'
+import ServiceBar from './../components/ServiceBar'
 import NavFooter from './../components/NavFooter'
 export default {
   name: 'order',
   components: {
-    OrderHeader,
+    ServiceBar,
     NavFooter
-  }
+  },
+  data(){
+    return {
+      title: '',
+      tip: ''
+    }
+  },
+  mounted(){
+    
+  },
 }
 </script>
 
